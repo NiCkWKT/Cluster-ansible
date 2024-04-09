@@ -14,7 +14,7 @@
       ansible.builtin.dnf:
         name:
           - epel-release
-          - elrepr-release
+          - elrepo-release
           - htop
           - btop
           - vim
