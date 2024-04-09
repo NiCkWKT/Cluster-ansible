@@ -1,0 +1,15 @@
+---
+- name: Build and run docker container
+  hosts: all
+  become: true
+  gather_facts: false
+  pre_tasks:
+    - name: Print variables
+      debug:
+        msg:
+          - "app name: {{ app_name }}"
+          - "local src dir: {{ app_src_dir }}"
+          - "remote src dir: {{ app_dest_dir }}"
+          - "access port: {{ docker_host_port }}"
+  roles:
+    - container

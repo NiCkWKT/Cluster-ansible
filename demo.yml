@@ -1,0 +1,19 @@
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Install neofetch
+      apt:
+        name: neofetch
+        state: present
+
+    - name: Install btop
+      apt:
+        name: btop
+        state: present
+
+    - name: Copy hello.txt
+      copy:
+        src: /Users/nickwkt/asiabots/ansible/hello.txt
+        dest: /home/ubuntu/hello.txt
+        mode: 0644

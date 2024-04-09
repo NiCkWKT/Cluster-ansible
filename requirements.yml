@@ -1,0 +1,4 @@
+roles:
+  - name: nvidia.nvidia_driver
+  - name: nvidia.enroot
+    src: https://github.com/NVIDIA/ansible-role-enroot.git

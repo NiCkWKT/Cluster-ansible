@@ -1,0 +1,19 @@
+---
+- name: Install docker and docker-compose
+  hosts: all
+  become: yes
+  pre_tasks:
+    - name: Print variables
+      debug:
+        msg:
+          - "{{ docker_users }}"
+          - "{{ docker_packages }}"
+          - "{{ docker_compose_version }}"
+  roles:
+    - geerlingguy.docker
+
+  tasks:
+    - name: Check docker and docker-compose version
+      shell:
+        cmd: "docker -v && docker-compose -v"
+      tags: version
