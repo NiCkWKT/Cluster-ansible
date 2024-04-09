@@ -1,4 +1,0 @@
----
-- name: Show docker container status
-  shell:
-    cmd: "docker ps"
