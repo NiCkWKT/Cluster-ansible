@@ -7,7 +7,7 @@
     - name: nvidia.nvidia_driver
       vars:
         nvidia_driver_skip_reboot: true
-        nvidia_driver_branch: "545"
+        nvidia_driver_branch: "535"
     - name: nvidia.enroot
   tasks:
     - name: "Install necessary packages"
