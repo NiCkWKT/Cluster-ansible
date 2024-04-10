@@ -9,20 +9,20 @@
         nvidia_driver_skip_reboot: true
         nvidia_driver_branch: "535"
     - name: nvidia.enroot
-  tasks:
-    - name: "Install necessary packages"
-      ansible.builtin.dnf:
-        name:
-          - epel-release
-          - elrepo-release
-          - htop
-          - btop
-          - vim
-          - wget
-          - net-tools
-          - iperf
-          - squashfuse
-          - traceroute
-          - sshpass
-        state: latest
-        update_cache: true
+  # tasks:
+  #   - name: "Install necessary packages"
+  #     ansible.builtin.dnf:
+  #       name:
+  #         - epel-release
+  #         - elrepo-release
+  #         - htop
+  #         - btop
+  #         - vim
+  #         - wget
+  #         - net-tools
+  #         - iperf
+  #         - squashfuse
+  #         - traceroute
+  #         - sshpass
+  #       state: latest
+  #       update_cache: true
